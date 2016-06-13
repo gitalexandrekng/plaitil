@@ -1,0 +1,245 @@
+body{
+    overflow-x: hidden;
+}
+
+.fullwidth{
+    min-width:100%;
+}
+
+.customheader{
+    min-height:100vh;
+    min-height:100%;
+}
+
+.navbarre{
+    display:flex;
+    padding-top:20px;
+    padding-bottom:20px;
+    position:absolute;
+    width:100%;
+    //border-bottom:1px solid lighten(black,0%);
+
+    .bordure{
+        height:8px;
+        background:black;
+        position:absolute;
+        width:150px;
+        top:0;
+        left:0;
+        right:0;
+        margin:auto;
+    }
+
+    .hamburger{
+        position:absolute;
+        width:40px;
+        height:40px;
+        background:white;
+        border-radius:50%;
+        bottom:-20px;
+        left:0;
+        right:0;
+        display:flex;
+        margin:auto;
+        //border:1px solid lighten(black,0%);
+        border-bottom:2px solid lighten(black,0%);
+
+        i{
+            margin:auto;
+        }
+    }
+
+    .logozer{
+        display:flex;
+        margin:auto;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+
+        .left{
+            //display:flex;
+            display:none;
+            width:100px;
+
+            .in{
+                margin-top:auto;
+                margin-bottom:auto;
+                margin-left:auto;
+            }
+        }
+
+        .right{
+            //display:flex;
+            display:none;
+            width:100px;
+
+            .in{
+                margin:auto 0;
+            }
+        }
+
+        .logo{
+            height:50px;
+            width:120px;
+            background:url(../../images/logo.svg);
+            background-size:contain;
+            background-repeat:no-repeat;
+            background-position:center;
+            margin:auto;
+            position:relative;
+        }
+    }
+
+    .in-menu{
+        height:50px;
+        display:none;
+        //display:flex;
+
+        .menu-headermenu-container{
+            display:flex;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+
+            #menu-headermenu{
+                margin-top:auto;
+                margin-bottom:auto;
+            }
+        }
+    }
+}
+
+.wrapper{
+    width:100%;
+    height:100vh;
+    padding:130px 30px 30px 30px;
+    display:flex;
+    position:relative;
+
+    .navigationcube{
+        position:absolute;
+        top:0;
+        width:20%;
+        background:black;
+        height:200px;
+    }
+
+    .centeredtext{
+        padding-top: 130px;
+        position:absolute;
+        top:20px;
+        text-align: center;
+        width:100%;
+        display:none;
+
+        h1{
+            font-size:7rem;
+            color:$primary-color;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing:20px;
+            opacity:0.5;
+        }
+    }
+
+    .left{
+        padding-top:130px;
+        height:100%;
+        width:40%;
+        display:flex;
+        top:0;
+        position:absolute;
+        z-index:1;
+
+        .inleft{
+            height:100%;
+            width:100%;
+            display:flex;
+            position:relative;
+
+            .cube{
+                margin-top:auto;
+                margin-bottom:70px;
+                width:100%;
+                background:$primary-color;
+                height:60%;
+
+            }
+        }
+    }
+
+    .right{
+        height:100%;
+        width:80%;
+        margin:0px 0px auto auto;
+        position:relative;
+        z-index:2;
+        display:flex;
+
+        .slide{
+            background-image:url(../../images/src/swag-1.png);
+            background-size:cover;
+            background-position:center;
+            filter:grayscale(100%);
+            height:100%;
+            top:0;
+            left:0;
+            opacity:0.8;
+            width:100%;
+        }
+
+        .inright{
+            height:60%;
+            width:100%;
+            position:absolute;
+            left:-75px;
+            bottom:40px;
+            margin:auto;
+            display:flex;
+
+            .texte{
+                margin-right:auto;
+                margin-top:auto;
+                margin-bottom:auto;
+                color:white;
+                font-family:"Merriweather";
+                font-size:4rem;
+            }
+        }
+
+        .rightslogan{
+            height:60%;
+            width:100%;
+            position:absolute;
+            left:0;
+            bottom:40px;
+            margin:auto;
+            display:flex;
+
+            .texte{
+                margin-right:auto;
+                margin-bottom:auto;
+                color:white;
+                padding-top:15px;
+                position:relative;
+                display:flex;
+
+                .barre{
+                    display:flex;
+
+                    .trace{
+                        height:2px;
+                        width:30px;
+                        background:white;
+                        margin:auto;
+                    }
+                }
+
+                .intexte{
+                    margin-left:10px;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                    font-weight:bold;
+                }
+            }
+        }
+    }
+}
