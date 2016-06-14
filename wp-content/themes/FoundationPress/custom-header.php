@@ -1,3 +1,7 @@
+<div class="marginheader">
+    <div class="fade"></div>
+</div>
+<div class="fadezer"></div>
 <div class="customheader">
 
     <!-- navbarre
@@ -5,15 +9,9 @@
     <div class="navbarre">
         <div class="bordure"></div>
         <div class="logozer">
-            <div class="left">
-                <div class="in">Agence</div>
-            </div>
             <div class="logo"></div>
-            <div class="right">
-                <div class="in">Web</div>
-            </div>
         </div>
-        <div class="in-menu"><?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?></div>
+        <div class="hiddedtoggle"><?php //wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?></div>
         <div class="hamburger"><i class="fa fa-bars"></i></div>
     </div>
 
@@ -26,14 +24,51 @@
 
     <?php endwhile; ?>
 
+    <div class="contacthigh">
+        <a href="#" class="close"><i class="fa fa-times"></i></a>
+        <div class="customform">
+            <h2>Contactez-nous</h2>
+            <h3>Ne soyez pas timide !</h3>
+            <div class="des">Nous pouvons vous aider à concrétiser votre projet. Nous vous accompagnerons et développerons votre projet de façon à le rendre unique !</div>
+            <div class="row">
+                <div class="small-6 columns" style="padding-right:4px;">
+                    <div class="input-group">
+                        <span class="input-group-label"><i class="fa fa-user"></i></span>
+                        <input class="input-group-field" placeholder="votre nom">
+                    </div>
+                </div>
+                <div class="small-6 columns">
+                    <div class="input-group">
+                        <span class="input-group-label"><i class="fa fa-envelope"></i></span>
+                        <input class="input-group-field">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="small-12 columns">
+                    <div class="input-group">
+                        <span class="input-group-label"><i class="fa fa-pencil"></i></span>
+                        <input class="input-group-field">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="small-12 columns">
+                    <textarea name="" id="" cols="30" rows="5"></textarea>
+                    <button type="submit" class="custombutton its">Envoyer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="wrapper">
         <div class="row small-collapse fullwidth">
-            <div class="small-3 columns" style="height:100%;">
+            <div class="large-3 medium-4 columns testleft" style="height:100%;">
                 <div class="left">
                     <div class="inleft"></div>
                 </div>
             </div>
-            <div class="small-9 columns" style="height:100%">
+            <div class="large-9 medium-8 columns testright" style="height:100%">
                 <div class="right">
 
                     <!-- Section 1 -->
@@ -44,7 +79,22 @@
                         <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
                             <div class="item" data-hash="<?php the_ID() ?>">
                                 <div class="sliderz" style="background-image:url(<?php the_post_thumbnail_url() ?>)"></div>
-                                <div class="fade"></div>
+                                <div class="caracteristiques">
+                                    <?php
+                                    $values = get_field('type');
+                                    if($values)
+                                    {
+                                    	echo '<ul>';
+
+                                    	foreach($values as $value)
+                                    	{
+                                    		echo '<li>' . $value . '</li>';
+                                    	}
+
+                                    	echo '</ul>';
+                                    }
+                                    ?>
+                                </div>
                             </div>
                         <?php endwhile; ?>
                     </div>
@@ -57,9 +107,11 @@
                             <div class="item titlez" data-hash="<?php the_ID() ?>">
                                 <div class="describe">
                                     <div class="barre"></div>
-                                    <div class="texte">Super portfolio de swag website</div>
+                                    <div class="texte"><?php the_field('slogan'); ?></div>
                                 </div>
                                 <div class="intitlez"><?php echo the_title() ?></div>
+                                <a href="<?php the_permalink() ?>" class="buttonport hvr-grow-shadow discover">Voir le projet</a>
+                                <div class="caracteristiques"></div>
                             </div>
                         <?php endwhile; ?>
                     </div>
@@ -105,7 +157,7 @@
                     <!-- more -->
                     <div class="more">
                         <div class="in">
-                            <div class="texte">Voir plus</div>
+                            <div class="texte">Portfolio complet</div>
                         </div>
                     </div>
                 </div>

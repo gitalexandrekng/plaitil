@@ -21,6 +21,7 @@
 		<link rel="apple-touch-icon" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icons/apple-touch-icon.png">
 		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/assets/components/animate.css/animate.min.css">
 		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/assets/components/owl.carousel/dist/assets/owl.carousel.min.css">
+		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/assets/components/hover/css/hover-min.css">
 		<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
 		<?php wp_head(); ?>
@@ -54,7 +55,20 @@
 		</nav>
 	</header>
 
-	<?php if (is_home(){ include('custom-header.php') }) ?>
+	<?php
+	if ( is_home() ) {
+	    // This is the blog posts index
+	    include('custom-header.php');
+	}
+	?>
 
 	<section class="container">
+
+		<?php
+		if ( is_home() ) {
+		    // This is the blog posts index
+		    include('custom-homepage.php');
+		}
+		?>
+
 		<?php do_action( 'foundationpress_after_header' );
