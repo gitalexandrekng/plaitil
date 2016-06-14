@@ -29,5 +29,24 @@
         </div>
     </div>
 
-    <div class="lastcrea"></div>
+    <div class="lastcrea">
+        <div class="banner">
+            <div class="flex">
+                <div class="in">
+                    <h2>Nos dernières créations</h2>
+                </div>
+            </div>
+        </div>
+        <div class="contenu">
+            <div class="row">
+                <?php $args = array( 'post_type' => 'portfolio', 'posts_per_page' => 10 ); ?>
+                <?php $loop = new WP_Query( $args ); ?>
+                <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+                    <div class="small-3 columns end">
+                        <div class="thumbn" style="background-image:url(<?php the_post_thumbnail_url() ?>)"></div>
+                    </div>
+                <?php endwhile; ?>
+            </div>
+        </div>
+    </div>
 </div>

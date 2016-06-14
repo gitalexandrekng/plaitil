@@ -109,10 +109,42 @@
     background:white;
     margin-top:50px;
 
+    .contenu{
+        background:white;
+        padding-top:50px;
+        padding-bottom:50px;
+
+        .thumbn{
+            height:250px;
+            width:100%;
+            background-size:cover;
+            background-position:center;
+        }
+    }
+
     .banner{
         background-image:url(../../images/fond3.jpg);
         background-size:cover;
         background-attachment:fixed;
         background-position:center;
+        width:100%;
+        height:300px;
+
+        .flex{
+            width:100%;
+            height:100%;
+            background:rgba(0,0,0,0.6);
+            display:flex;
+
+            .in{
+                margin:auto;
+
+                h2{
+                    color:white;
+                    text-transform: uppercase;
+                    letter-spacing: 5px
+                }
+            }
+        }
     }
 }
