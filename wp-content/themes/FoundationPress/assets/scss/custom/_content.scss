@@ -1,3 +1,38 @@
+@keyframes rotate {
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes rotatereverse {
+  100% {
+    transform: rotateZ(-360deg);
+  }
+}
+
+.loader{
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:600;
+    width:100vw;
+    height:100vh;
+    background:$primary-color;
+    display:flex;
+
+    .anim{
+        margin:auto;
+        position:relative;
+
+        .rond{
+            width:40px;
+            height:40px;
+            border-radius:50%;
+            border-left:3px solid #666;
+        }
+    }
+}
+
 .container{
     position:relative;
     z-index:20;
@@ -129,6 +164,15 @@
                         display:inline-block;
                         margin-left:20px;
                         margin-right:20px;
+
+                        a{
+                            color:white;
+                            transition:0.3s;
+
+                            &:hover{
+                                color:$primary-color;
+                            }
+                        }
                     }
                 }
             }
@@ -156,6 +200,7 @@
 
         .vignette{
             position:relative;
+            margin-bottom:20px;
 
             .linkin{
                 display:block;

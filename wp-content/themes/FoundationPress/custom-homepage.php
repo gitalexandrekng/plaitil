@@ -12,7 +12,7 @@
         <div class="medium-12 columns">
             <img class="image" src="<?php echo get_stylesheet_directory_uri() ?>/images/fond1.jpg" alt="">
             <div class="row small-collapse" data-equalizer>
-                <div class="small-6 columns" data-equalizer-watch>
+                <div class="medium-6 columns" data-equalizer-watch>
                     <div class="txtone">
                         <h2>Notre expertise</h2>
                         <hr>
@@ -21,7 +21,7 @@
                         <a href="<?php bloginfo('home') ?>/portfolio" class="hvr-bounce-to-top custom-button">Projets</a>
                     </div>
                 </div>
-                <div class="small-6 columns" data-equalizer-watch>
+                <div class="medium-6 columns" data-equalizer-watch>
                     <div class="txttwo">
                         <h2>Qui sommes nous?</h2>
                         <hr>
@@ -51,7 +51,7 @@
                 <?php $args = array( 'post_type' => 'portfolio', 'posts_per_page' => 10 ); ?>
                 <?php $loop = new WP_Query( $args ); ?>
                 <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-                    <div class="small-3 columns vignette end">
+                    <div class="large-3 medium-6 columns vignette end">
                         <a class="linkin" href="<?php the_permalink() ?>">
                             <div class="thumbn" style="background-image:url(<?php the_field('miniature'); ?>)"></div>
                             <div class="hovered">

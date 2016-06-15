@@ -15,6 +15,29 @@
 
     <?php endwhile; ?>
 
+    <!-- CLASS MEDIUM
+    ===================== -->
+
+    <div class="wrapper-medium">
+        <div class="inwrap">
+            <div class="slid owl-carousel" id="responsiveslider">
+                <?php $args = array( 'post_type' => 'portfolio', 'posts_per_page' => 10 ); ?>
+                <?php $loop = new WP_Query( $args ); ?>
+                <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+                    <div class="item">
+                        <div class="inslidez" style="background-image:url(<?php the_post_thumbnail_url() ?>)">
+                            <div class="car">
+                                <div class="slog"><?php the_field('slogan'); ?></div>
+                                <div class="int" style="margin-top:30px;"><?php the_title() ?></div>
+                                <div class="text-center" style="margin-top:30px;"><a href="<?php the_permalink() ?>" class="but hvr-grow-shadow">Découvrir</a></div>
+                            </div>
+                        </div>
+                    </div>
+                <?php endwhile; ?>
+            </div>
+        </div>
+    </div>
+
     <div class="contacthigh">
         <a href="#" class="close"><i class="fa fa-times"></i></a>
         <div class="customform">

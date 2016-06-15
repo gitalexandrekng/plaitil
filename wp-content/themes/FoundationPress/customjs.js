@@ -167,6 +167,15 @@ $('#owltitle').owlCarousel({
     mouseDrag: false,
 });
 
+$('#responsiveslider').owlCarousel({
+    items:1,
+    autoplay:true,
+    loop:true,
+    startPosition: 'URLHash',
+    animateOut: 'fadeOut',
+    animateIn: 'fadeIn',
+});
+
 $('.hamburger').hover(function(){
     $(this).css({
         transform:'scale(1.4)',
@@ -190,6 +199,11 @@ $('.hamburger').on('click', function(){
     $(this).css({
         opacity:'0',
         zIndex:'1'
+    })
+
+    $('.wrapper-medium').css({
+        opacity:'0',
+        transition:'0.5s',
     })
 
     $('.wrapper').css({
@@ -225,6 +239,10 @@ $('.croix').on('click', function(){
     })
 
     $('.navig').removeClass('animated fadeInUp')
+
+    $('.wrapper-medium').css({
+        opacity:'1',
+    })
 
     $('.wrapper').css({
         opacity:'1',

@@ -1,0 +1,95 @@
+.wrapper-medium{
+    display:none;
+    height:100vh;
+    padding:130px 10px 10px 10px;
+    width:100vw;
+
+    @include breakpoint(medium down){
+        display:block;
+    }
+
+    @include breakpoint(small down){
+        padding:130px 0px 0px 0px;
+    }
+
+    .inwrap{
+        width:100%;
+        height:100%;
+
+        .slid{
+            height:100%;
+            width:100%;
+
+            .owl-stage-outer{
+                width:100%;
+                height:100%;
+
+                .owl-stage{
+                    width:100%;
+                    height:100%;
+
+                    .owl-item{
+                        width:100%;
+                        height:100%;
+
+                        .item{
+                            height:100% !important;
+                            width:100% !important;
+
+                            .inslidez{
+                                height:100%;
+                                width:100%;
+                                background-size:cover;
+                                background-position:center;
+                                display:flex;
+
+                                .car{
+                                    background:rgba(52,152,219, 0.9);
+                                    margin-top:auto;
+                                    margin-bottom:50px;
+                                    margin-left:auto;
+                                    margin-right:auto;
+                                    padding:15px;
+                                    width:90%;
+
+                                    .int{
+                                        color:white;
+                                        font-family:"Merriweather";
+                                        text-align: center;
+                                        font-size:36px;
+                                    }
+
+                                    .slog{
+                                        text-transform: uppercase;
+                                        color:white;
+                                        text-align: center;
+                                        letter-spacing: 4px;
+                                    }
+
+                                    .but{
+                                        border:0;
+                                        background:black;
+                                        text-transform: uppercase;
+                                        letter-spacing: 2px;
+                                        padding:10px 30px;
+                                        color:white;
+                                        transition:0.3s;
+
+                                        &:hover{
+                                            background:$primary-color;
+                                        }
+
+                                        &:before{
+                                            background:black;
+                                            //background:transparent;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

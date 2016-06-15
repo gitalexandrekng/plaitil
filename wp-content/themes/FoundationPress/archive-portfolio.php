@@ -42,7 +42,7 @@ get_header(); ?>
                         <?php $args = array( 'post_type' => 'portfolio', 'posts_per_page' => 10 ); ?>
                         <?php $loop = new WP_Query( $args ); ?>
                         <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-                            <div class="small-3 columns vignette end">
+                            <div class="large-3 medium-6 columns vignette end">
                                 <a class="linkin" href="<?php the_permalink() ?>">
                                     <div class="thumbn" style="background-image:url(<?php the_field('miniature'); ?>)"></div>
                                     <div class="hovered">

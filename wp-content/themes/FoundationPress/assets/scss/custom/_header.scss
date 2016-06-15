@@ -294,7 +294,7 @@ body{
     }
 
     @include breakpoint(medium down) {
-        padding:130px 10px 10px 10px;
+        display:none;
     }
 
     .right{
@@ -543,7 +543,7 @@ body{
     }
 
     @include breakpoint(medium down) {
-        padding:130px 10px 10px 10px;
+        display:none;
     }
 
     .left{

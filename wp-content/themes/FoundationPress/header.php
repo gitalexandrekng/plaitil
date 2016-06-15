@@ -31,6 +31,12 @@
 
 	<?php do_action( 'foundationpress_layout_start' ); ?>
 
+	<!--<div class="loader">
+	    <div class="anim">
+	        <div class="rond"></div>
+	    </div>
+	</div>-->
+
 	<header id="masthead" class="site-header" role="banner" style="display:none;">
 		<div class="title-bar" data-responsive-toggle="site-navigation">
 			<button class="menu-icon" type="button" data-toggle="mobile-menu"></button>
