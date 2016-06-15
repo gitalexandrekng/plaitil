@@ -167,6 +167,20 @@ $('#owltitle').owlCarousel({
     mouseDrag: false,
 });
 
+$('.hamburger').hover(function(){
+    $(this).css({
+        transform:'scale(1.4)',
+        transition:'0.5s',
+        color:'#3498db'
+    })
+}, function(){
+    $(this).css({
+        transform:'scale(1)',
+        transition:'0.2s',
+        color:'black'
+    })
+})
+
 $('.hamburger').on('click', function(){
 
     $('body').css({
