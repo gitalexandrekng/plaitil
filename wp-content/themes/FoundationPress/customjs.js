@@ -10,10 +10,38 @@ $('.inz').hover(function(){
     })
 })
 
-/*$('.contacthigh').css({
-    height: $('.wrapperred').height(),
-    width: $('.wrapperred').width(),
-})*/
+$('.vignette').hover(function(){
+    $(this).find('.thumbn').css({
+        transform:'scale(1.5)',
+    })
+
+    $(this).find('.hovered').css({
+        background:'rgba(0,0,0,0.8)',
+    })
+
+    $(this).find('.more').css({
+        opacity:'1',
+        bottom:'0'
+    })
+
+    $(this).find('.tit').addClass('animated fadeInUp')
+
+}, function(){
+    $(this).find('.thumbn').css({
+        transform:'scale(1)',
+    })
+
+    $(this).find('.hovered').css({
+        background:'rgba(0,0,0,0)',
+    })
+
+    $(this).find('.more').css({
+        opacity:'0',
+        bottom:'35px'
+    })
+
+    $(this).find('.tit').removeClass('animated fadeInUp')
+})
 
 $('.contactcube').on('click', function(e){
     e.preventDefault()
@@ -140,9 +168,22 @@ $('#owltitle').owlCarousel({
 });
 
 $('.hamburger').on('click', function(){
-    $(this).addClass('deploye')
+
+    $('body').css({
+        overflowY:'hidden',
+    })
+
+    $(this).css({
+        opacity:'0',
+        zIndex:'1'
+    })
 
     $('.wrapper').css({
+        opacity:'0',
+        transition:'0.5s',
+    })
+
+    $('.z').css({
         opacity:'0',
         transition:'0.5s',
     })
@@ -153,8 +194,54 @@ $('.hamburger').on('click', function(){
     })
 
     setTimeout(function(){
-        $('.hiddedtoggle').toggle('slow')
+        $('.hiddedtoggle').css({
+            height:'70vh',
+        })
     }, 400)
+
+    setTimeout(function(){
+        $('.navig').addClass('animated fadeInUp')
+    }, 800)
+})
+
+$('.croix').on('click', function(){
+
+    $('body').css({
+        overflowY:'',
+    })
+
+    $('.navig').removeClass('animated fadeInUp')
+
+    $('.wrapper').css({
+        opacity:'1',
+    })
+
+    $('.z').css({
+        opacity:'1',
+    })
+
+    $('.wrapperred').css({
+        opacity:'1',
+    })
+
+    $('.hiddedtoggle').css({
+        height:'0vh',
+    })
+
+    $('.hamburger').css({
+        opacity:'1',
+        zIndex:'3'
+    })
 })
 
 $('#owlslide .item').css('height', $('#owlslide'))
+
+$('.thu').hover(function(){
+    $(this).find('.zo').css({
+        transform:'scale(1.2)',
+    })
+}, function(){
+    $(this).find('.zo').css({
+        transform:'scale(1)',
+    })
+})

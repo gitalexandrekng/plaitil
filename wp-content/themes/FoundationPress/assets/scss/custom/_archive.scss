@@ -1,0 +1,127 @@
+#inpage{
+    padding-top:130px;
+
+    .z{
+
+    }
+}
+
+.wrappered{
+    background-size:cover;
+    width:100vw;
+    height:400px;
+    background-position:center;
+    background-attachment: fixed;
+}
+
+.headtitle{
+    max-width:1200px;
+    margin:auto;
+    text-align: center;
+    position:relative;
+
+    .tup{
+        display:flex;
+
+        ul{
+            margin:0 auto;
+            padding-bottom:50px;
+
+            li{
+                text-transform: uppercase;
+                letter-spacing: 3px;
+                list-style-type: none;
+                margin-bottom:15px;
+                border:1px solid black;
+                padding:8px 30px;
+            }
+        }
+    }
+
+    .bb{
+        width:100px;
+        height:8px;
+        background:$primary-color;
+        left:0;
+        right:0;
+        margin:auto;
+        top:0;
+        position:absolute;
+    }
+
+    h1{
+        padding-top:50px;
+        padding-bottom:20px;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+    }
+
+    .la{
+        margin-bottom:50px;
+        i{
+            margin-right:10px;
+        }
+
+        .social{
+            margin-top:30px;
+            ul{
+                li{
+                    display: inline-block;
+                    margin-left:20px;
+                    margin-right:20px;
+
+                    a{
+
+                        i{
+                            font-size:22px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.slogan{
+    text-align: center;
+    padding:20px;
+}
+
+.contz{
+    max-width:1200px;
+    padding:10px;
+    margin:auto;
+    text-align: center;
+}
+
+.galz{
+    padding-top:30px;
+
+    img{
+        width:100%;
+        height:auto;
+        transition: 0.3s;
+    }
+
+    ul{
+        li{
+            list-style-type: none;
+        }
+    }
+}
+
+.datz{
+    text-align: center;
+    margin-bottom:20px;
+    //text-transform: uppercase;
+    //font-weight:bold;
+    font-family: "Merriweather";
+}
+
+.zo{
+    height:200px;
+    width:100%;
+    background-size:cover;
+    transition: 0.3s;
+    background-position:center;
+}

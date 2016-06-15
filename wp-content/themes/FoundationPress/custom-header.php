@@ -4,16 +4,7 @@
 <div class="fadezer"></div>
 <div class="customheader">
 
-    <!-- navbarre
-    =========================== -->
-    <div class="navbarre">
-        <div class="bordure"></div>
-        <div class="logozer">
-            <div class="logo"></div>
-        </div>
-        <div class="hiddedtoggle"><?php //wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?></div>
-        <div class="hamburger"><i class="fa fa-bars"></i></div>
-    </div>
+    <?php include('header-all.php') ?>
 
     <!-- DEBUT DU SLIDE
     ====================== -->
@@ -135,8 +126,11 @@
 
                     <!-- La navigation en cube -->
                     <div class="navigationcube">
-                        <a class="contactcube">
-                            <div class="incontact">Contact</div>
+                        <a class="contactcube hvr-bounce-to-top">
+                            <div class="incontact">
+                                <span style="font-size:14px;">Vous avez un projet en tête ?</span><br>
+                                Contactez-nous
+                            </div>
                         </a>
                         <div class="row small-collapse fullwidth" style="height:50%;position:relative;z-index:5;">
                             <?php $args = array( 'post_type' => 'portfolio', 'posts_per_page' => 2 ); ?>
