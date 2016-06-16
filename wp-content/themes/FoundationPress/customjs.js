@@ -1,5 +1,25 @@
 //$('.wrapper').css('height', $( window ).height() - $('.navbarre').innerHeight())
 
+$('body a:not(.non)').on('click', function(e){
+    e.preventDefault()
+    var self = $(this)
+    $('body').addClass('animated fadeOut')
+
+    setTimeout(function(){
+        window.location.href = self.attr('href');
+    }, 1000)
+})
+
+$(window).load(function(){
+    setTimeout(function(){
+        $('.loader').addClass('animated fadeOutDown')
+    }, 1000)
+
+    setTimeout(function(){
+        $('.val').addClass('animated fadeInUp')
+    }, 1200)
+})
+
 $('.inz').hover(function(){
     $(this).find('.fond').css({
         transform:'scale(1.1)'
@@ -57,6 +77,11 @@ $('.contactcube').on('click', function(e){
     },300)
 })
 
+$('.wrappered').css('height', $(window).height() - 90)
+
+$('.wrappered').parallax("50%", 0.5);
+$('.banner').parallax("50%", 0.5);
+
 $(document).ready(function(){
     $(".container").on('inview', function(event, isInView) {
         if (isInView) {
@@ -74,16 +99,14 @@ $(document).ready(function(){
         }
     });
 
-    /*$(".marginfoot").on('inview', function(event, isInView) {
+    /*$(".wrappered").on('inview', function(event, isInView) {
         if (isInView) {
-            $('.footz').css({
-                zIndex:'15',
-                opacity:'1'
+            $('.navbarre').css({
+                position:'absolute',
             })
         } else {
-            $('.footz').css({
-                zIndex:'10',
-                opacity:'0'
+            $('.navbarre').css({
+                position:'fixed',
             })
         }
     });*/
@@ -116,6 +139,7 @@ $('.buttonport').on('click', function(e){
     $('.carrerouge').css({
         width:'110%',
         opacity:'1',
+        //background:'rgba(52,152,219,1)'
     })
 
     $('.navigationcube').css({
@@ -179,7 +203,7 @@ $('#responsiveslider').owlCarousel({
 $('.hamburger').hover(function(){
     $(this).css({
         transform:'scale(1.4)',
-        transition:'0.5s',
+        transition:'0.2s',
         color:'#3498db'
     })
 }, function(){

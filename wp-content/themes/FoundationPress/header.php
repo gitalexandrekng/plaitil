@@ -31,11 +31,16 @@
 
 	<?php do_action( 'foundationpress_layout_start' ); ?>
 
-	<!--<div class="loader">
+	<div class="loader">
 	    <div class="anim">
-	        <div class="rond"></div>
+            <div class="inlogo"></div>
+            <div class="sub">Exploratrice en web depuis 2005</div>
+	        <div class="rond">
+	            <div class="rondleft"></div>
+                <div class="rondright"></div>
+	        </div>
 	    </div>
-	</div>-->
+	</div>
 
 	<header id="masthead" class="site-header" role="banner" style="display:none;">
 		<div class="title-bar" data-responsive-toggle="site-navigation">

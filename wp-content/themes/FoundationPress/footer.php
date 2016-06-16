@@ -46,6 +46,7 @@
 
 <script src="<?php echo get_stylesheet_directory_uri() ?>/assets/components/owl.carousel/dist/owl.carousel.min.js" type="text/javascript"></script>
 <script src="<?php echo get_stylesheet_directory_uri() ?>/assets/components/protonet/jquery.inview/jquery.inview.min.js" type="text/javascript"></script>
+<script src="<?php echo get_stylesheet_directory_uri() ?>/jquery.parallax.js"></script>
 <script src="<?php echo get_stylesheet_directory_uri() ?>/customjs.js"></script>
 
 

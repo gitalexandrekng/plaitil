@@ -39,7 +39,7 @@
     </div>
 
     <div class="contacthigh">
-        <a href="#" class="close"><i class="fa fa-times"></i></a>
+        <a href="#" class="close non"><i class="fa fa-times"></i></a>
         <div class="customform">
             <h2>Contactez-nous</h2>
             <h3>Ne soyez pas timide !</h3>
@@ -54,7 +54,7 @@
                 <div class="small-6 columns">
                     <div class="input-group">
                         <span class="input-group-label"><i class="fa fa-envelope"></i></span>
-                        <input class="input-group-field">
+                        <input class="input-group-field" placeholder="votre e-mail">
                     </div>
                 </div>
             </div>
@@ -62,7 +62,7 @@
                 <div class="small-12 columns">
                     <div class="input-group">
                         <span class="input-group-label"><i class="fa fa-pencil"></i></span>
-                        <input class="input-group-field">
+                        <input class="input-group-field" placeholder="sujet du message">
                     </div>
                 </div>
             </div>
@@ -124,7 +124,7 @@
                                     <div class="texte"><?php the_field('slogan'); ?></div>
                                 </div>
                                 <div class="intitlez"><?php echo the_title() ?></div>
-                                <a href="<?php the_permalink() ?>" class="buttonport hvr-grow-shadow discover">Voir le projet</a>
+                                <a href="<?php the_permalink() ?>" class="non buttonport hvr-grow-shadow discover">Voir le projet</a>
                                 <div class="caracteristiques"></div>
                             </div>
                         <?php endwhile; ?>
@@ -149,7 +149,7 @@
 
                     <!-- La navigation en cube -->
                     <div class="navigationcube">
-                        <a class="contactcube hvr-bounce-to-top">
+                        <a class="non contactcube hvr-bounce-to-top">
                             <div class="incontact">
                                 <span style="font-size:14px;">Vous avez un projet en tête ?</span><br>
                                 Contactez-nous
@@ -159,7 +159,7 @@
                             <?php $args = array( 'post_type' => 'portfolio', 'posts_per_page' => 2 ); ?>
                             <?php $loop = new WP_Query( $args ); ?>
                             <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-                                <a class="small-6 columns inz" href="#<?php the_ID() ?>">
+                                <a class="non small-6 columns inz" href="#<?php the_ID() ?>">
                                     <div class="fond" style="background-image:url(<?php the_post_thumbnail_url() ?>)">
                                     </div>
                                 </a>

@@ -15,10 +15,14 @@ get_header(); ?>
         <?php do_action( 'foundationpress_before_content' ); ?>
         <?php while ( have_posts() ) : the_post(); ?>
         	<article <?php post_class('main-content') ?> id="post-<?php the_ID(); ?>">
-                <div class="wrappered" style="background-image:url(<?php the_post_thumbnail_url() ?>)"></div>
+                <div class="wrappered" style="background-image:url(<?php the_post_thumbnail_url() ?>)">
+                    <div class="val"><h1><?php the_title(); ?></h1></div>
+                </div>
         		<div class="headtitle">
+                    <div class="slogan">
+                        <h2><?php the_field('slogan'); ?></h2>
+                    </div>
                     <div class="bb"></div>
-        			<h1 class="entry-title"><?php the_title(); ?></h1>
                     <div class="la">
                         <a href="<?php the_field('url'); ?>"><i class="fa fa-link"></i><?php the_field('url'); ?></a>
                         <div class="social">
@@ -49,9 +53,6 @@ get_header(); ?>
                         <i class="fa fa-angle-down fa-3x"></i>
                     </div>
         		</div>
-                <div class="slogan">
-                    <h2><?php the_field('slogan'); ?></h2>
-                </div>
                 <div class="datz">
                     Création le : <?php the_field('date'); ?>
                 </div>

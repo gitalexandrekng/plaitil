@@ -17,18 +17,55 @@
     z-index:600;
     width:100vw;
     height:100vh;
-    background:$primary-color;
+    //background:$primary-color;
+    background:white;
     display:flex;
 
     .anim{
         margin:auto;
         position:relative;
 
+        .sub{
+            margin-bottom:50px;
+            margin-top:10px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .inlogo{
+            background-image:url(../../images/logo.svg);
+            background-size:contain;
+            width:200px;
+            height:100px;
+            margin:auto;
+            background-position:center;
+            background-repeat:no-repeat;
+        }
+
         .rond{
-            width:40px;
-            height:40px;
-            border-radius:50%;
-            border-left:3px solid #666;
+            margin:auto;
+            position:relative;
+            width:50px;
+            height:50px;
+
+            .rondleft{
+                width:50px;
+                height:50px;
+                border-radius:50%;
+                border-left:2px solid #000;
+                animation: rotatereverse 1s infinite linear;
+            }
+
+            .rondright{
+                width:35px;
+                height:35px;
+                border-radius:50%;
+                border-right:2px solid $primary-color;
+                position:absolute;
+                top:0;bottom:0;left:0;right:0;
+                margin:auto;
+                animation: rotate 1s infinite linear;
+            }
         }
     }
 }

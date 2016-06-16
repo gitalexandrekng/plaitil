@@ -1,5 +1,5 @@
 #inpage{
-    padding-top:130px;
+    padding-top:90px;
 
     .z{
 
@@ -12,6 +12,19 @@
     height:400px;
     background-position:center;
     background-attachment: fixed;
+    display:flex;
+
+    .val{
+        margin:auto;
+        opacity:0;
+
+        h1{
+            color:white;
+            text-transform: uppercase;
+            text-align: center;
+            letter-spacing: 5px;
+        }
+    }
 }
 
 .headtitle{
@@ -58,6 +71,8 @@
 
     .la{
         margin-bottom:50px;
+        padding-top:30px;
+
         i{
             margin-right:10px;
         }
@@ -85,6 +100,11 @@
 .slogan{
     text-align: center;
     padding:20px;
+    padding-top:50px;
+
+    h2{
+        font-family: 'Merriweather';
+    }
 }
 
 .contz{
