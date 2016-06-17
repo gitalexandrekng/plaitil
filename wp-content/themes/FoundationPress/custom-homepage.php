@@ -1,5 +1,5 @@
 <div class="incontent">
-    <div class="agence">
+    <div class="agence" id="agence">
         <div class="inza row">
             <div class="small-12 columns">
                 <h1>Notre agence</h1>
@@ -27,7 +27,7 @@
                         <hr>
                         L’agence “plait-il?” réunit un collectif de professionnels et vous accompagne sur toute la chaîne de communication, de votre identité visuelle à votre stratégie digitale. Chaque projet, chaque client est unique. Pour chacun, nous mettons en œuvre une méthodologie
 
-                        <a href="<?php bloginfo('home') ?>/portfolio" class="hvr-bounce-to-top custom-button">Contact</a>
+                        <a href="<?php bloginfo('home') ?>/page-contact" class="hvr-bounce-to-top custom-button">Contact</a>
                     </div>
                 </div>
             </div>

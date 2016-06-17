@@ -1,5 +1,23 @@
 //$('.wrapper').css('height', $( window ).height() - $('.navbarre').innerHeight())
 
+$(document).ready(function() {
+		$('.js-scrollTo').on('click', function() { // Au clic sur un élément
+			var page = $(this).attr('href'); // Page cible
+			var speed = 750; // Durée de l'animation (en ms)
+			$('html, body').animate( { scrollTop: $(page).offset().top }, speed ); // Go
+			return false;
+		});
+	});
+
+$('.navig a').addClass('js-scrollTo')
+$('.navig a:eq(2)').addClass('non')
+$('.js-scrollTo').on('click', function(){
+    $('.hiddedtoggle').css('display', 'none')
+    $('.wrapperred').css('opacity', '1')
+    $('.wrapper').css('opacity', '1')
+    $('body').css('overflowY', '')
+})
+
 $('body a:not(.non)').on('click', function(e){
     e.preventDefault()
     var self = $(this)

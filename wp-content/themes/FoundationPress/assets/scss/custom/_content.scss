@@ -324,3 +324,70 @@
         }
     }
 }
+
+.c{
+    .customform{
+        padding:15px;
+        margin:auto;
+        max-width:600px;
+        transition:0.5s;
+        opacity:1;
+
+        .its{
+            width:100%;
+            margin-top:-16px;
+        }
+
+        h2{
+            margin-top:50px;
+            text-align:center;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+        }
+
+        h3{
+            text-align:center;
+        }
+
+        .des{
+            text-align: center;
+            margin-bottom:30px;
+        }
+
+        .input-group-label{
+            background:#666;
+            border:0;
+            //border-radius:5px 0px 0px 5px;
+        }
+
+        .input-group-field{
+            border:1px solid #CCC !important;
+            border-left:0px !important;
+            //background:darken(#CCC,10%);
+            padding-left:10px
+        }
+
+        textarea{
+            //background:darken(#CCC,10%);
+            box-shadow:0px 0px 0px;
+            border:1px solid #CCC;
+        }
+
+        input{
+            border:0;
+            outline:0;
+            width:100%;
+
+            &:focus{
+                border:0;
+                outline:0;
+                box-shadow:0px 0px 0px;
+            }
+
+            &:active{
+                border:0;
+                outline:0;
+            }
+        }
+    }
+}

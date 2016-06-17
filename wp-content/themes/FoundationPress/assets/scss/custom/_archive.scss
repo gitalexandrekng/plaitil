@@ -6,6 +6,19 @@
     }
 }
 
+.an{
+    position:absolute;
+    bottom:20px;
+    left:0;
+    right:0;
+    margin:auto;
+    text-align: center;
+
+    i{
+        color:white;
+    }
+}
+
 .wrappered{
     background-size:cover;
     width:100vw;
@@ -13,6 +26,7 @@
     background-position:center;
     background-attachment: fixed;
     display:flex;
+    position:relative;
 
     .val{
         margin:auto;

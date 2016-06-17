@@ -17,6 +17,7 @@ get_header(); ?>
         	<article <?php post_class('main-content') ?> id="post-<?php the_ID(); ?>">
                 <div class="wrappered" style="background-image:url(<?php the_post_thumbnail_url() ?>)">
                     <div class="val"><h1><?php the_title(); ?></h1></div>
+                    <div class="an"><span style="color:white">Scroll</span><br><i class="fa fa-angle-double-down fa-2x"></i></div>
                 </div>
         		<div class="headtitle">
                     <div class="slogan">
